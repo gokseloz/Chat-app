@@ -1,0 +1,179 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Rubik", sans-serif; }
+
+a, a:visited, a:hover {
+  text-decoration: none; }
+
+.main-wrapper {
+  background-color: #f5f3f7; }
+  .main-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 40rem;
+    height: 60rem;
+    background: linear-gradient(to bottom, #e942ff, #8838ff);
+    border-bottom-left-radius: 20rem;
+    border-bottom-right-radius: 20rem;
+    left: -15rem; }
+
+.showcase-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6rem; }
+
+.phone {
+  width: 27.5rem;
+  padding: 1.2rem;
+  background-color: white;
+  border-radius: 3.2rem; }
+  .phone-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f5f3f7;
+    border-radius: 2.2rem;
+    overflow: hidden; }
+    .phone-screen .screen-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 0 0 .6rem .6rem;
+      background: linear-gradient(to right, #8838ff, #e942ff);
+      padding: 3rem 2rem 1.2rem 1.2rem;
+      position: relative; }
+      .phone-screen .screen-head::before {
+        content: "";
+        position: absolute;
+        width: 55%;
+        height: 2rem;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 0px 0px 18px 18px;
+        background-color: white; }
+      .phone-screen .screen-head .left-arrow {
+        color: white;
+        font-size: 1.4rem;
+        flex: 1; }
+      .phone-screen .screen-head .profile {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex: 8; }
+        .phone-screen .screen-head .profile-img {
+          width: 3.2rem;
+          border-radius: 50%;
+          border: 2px solid white; }
+        .phone-screen .screen-head .profile-area {
+          display: flex;
+          flex-direction: column;
+          margin-left: 1rem;
+          height: 100%; }
+          .phone-screen .screen-head .profile-area .profile-name {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: white;
+            margin-bottom: 3px; }
+          .phone-screen .screen-head .profile-area .profile-status {
+            color: #d89eff;
+            font-size: .8rem; }
+      .phone-screen .screen-head .ellipsis {
+        color: white;
+        font-size: 1.2rem;
+        flex: 1;
+        text-align: right; }
+    .phone-screen .screen-chat {
+      display: flex;
+      flex-direction: column; }
+      .phone-screen .screen-chat .dog-walker {
+        font-size: .9rem;
+        max-width: 58%;
+        background-color: rgba(146, 65, 200, 0.1);
+        color: #9241c8;
+        border-radius: 1.2rem 1.2rem 1.2rem .4rem;
+        padding: .8rem 1rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        line-height: 1.2rem; }
+      .phone-screen .screen-chat .dog-owner {
+        align-self: flex-end;
+        font-size: .9rem;
+        max-width: 58%;
+        background-color: white;
+        padding: .8rem 1rem;
+        color: #3e2753;
+        border-radius: 1.2rem 1.2rem .4rem 1.2rem;
+        margin-top: 1rem;
+        margin-right: 1rem;
+        line-height: 1.2rem;
+        box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.1); }
+      .phone-screen .screen-chat .dog-owner-images {
+        align-self: flex-end;
+        font-size: .9rem;
+        max-width: 60%;
+        padding: .8rem 1rem 0 0;
+        color: #3e2753;
+        border-radius: 1.2rem 1.2rem 0rem 1.2rem;
+        margin-top: 1rem;
+        margin-right: 1rem;
+        line-height: 1.2rem; }
+        .phone-screen .screen-chat .dog-owner-images img {
+          width: 4rem;
+          border-radius: 1rem; }
+      .phone-screen .screen-chat .offer {
+        width: 70%;
+        padding: 1rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        background: linear-gradient(to right, #8838ff, #e942ff);
+        color: white;
+        border-radius: 1.2rem 1.2rem 1.2rem .4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .phone-screen .screen-chat .offer-circle {
+          width: 1.5rem;
+          height: 1.5rem;
+          border: 1px solid #e570ff;
+          border-radius: 50%; }
+        .phone-screen .screen-chat .offer-desc {
+          flex: 2;
+          margin-left: 1rem; }
+        .phone-screen .screen-chat .offer-price {
+          font-size: 1.6rem;
+          font-weight: 700;
+          margin-right: 1rem; }
+    .phone-screen .textArea {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1.5rem 1rem 1rem;
+      border-radius: 5rem;
+      background-color: white;
+      padding: .8rem; }
+      .phone-screen .textArea input {
+        outline: none;
+        border: none;
+        margin-left: 1.5rem;
+        color: #3e2753;
+        font-size: .9rem; }
+        .phone-screen .textArea input::placeholder {
+          font-size: 1rem;
+          color: #c6cacd; }
+      .phone-screen .textArea i {
+        font-size: 1.4rem;
+        color: white;
+        background-color: #3e2753;
+        border-radius: 50%;
+        padding: .7rem .9rem;
+        text-align: center; }

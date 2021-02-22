@@ -13,23 +13,66 @@ a, a:visited, a:hover {
   text-decoration: none; }
 
 .main-wrapper {
-  background-color: #f5f3f7; }
+  background-color: #f5f3f7;
+  position: relative;
+  overflow: hidden; }
+  @media (min-width: 768px) {
+    .main-wrapper {
+      height: 100vh; } }
   .main-wrapper::before {
     content: "";
     position: absolute;
+    width: 46rem;
+    height: 54rem;
+    background: linear-gradient(to top, #8838ff, #e942ff), linear-gradient(to left, #8838ff, #e942ff);
+    border-bottom-left-radius: 25rem;
+    border-bottom-right-radius: 25rem;
+    left: -27rem; }
+    @media (min-width: 768px) {
+      .main-wrapper::before {
+        left: -15rem;
+        height: 69rem;
+        border-bottom-left-radius: 30rem;
+        border-bottom-right-radius: 30rem; } }
+    @media (min-width: 1200px) {
+      .main-wrapper::before {
+        left: -8rem; } }
+  .main-wrapper::after {
+    content: "";
+    position: absolute;
     width: 40rem;
-    height: 60rem;
-    background: linear-gradient(to bottom, #e942ff, #8838ff);
-    border-bottom-left-radius: 20rem;
-    border-bottom-right-radius: 20rem;
-    left: -15rem; }
+    height: 45rem;
+    background-color: rgba(233, 230, 239, 0.5);
+    border-top-left-radius: 25rem;
+    border-top-right-radius: 25rem;
+    bottom: 0;
+    right: -22rem; }
+    @media (min-width: 768px) {
+      .main-wrapper::after {
+        height: 75rem;
+        right: -15rem;
+        border-top-left-radius: 40rem;
+        border-top-right-radius: 40rem; } }
+    @media (min-width: 1200px) {
+      .main-wrapper::after {
+        width: 45rem;
+        right: -12rem; } }
 
 .showcase-wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 6rem; }
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  z-index: 5; }
+  @media (min-width: 768px) {
+    .showcase-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      flex-direction: row; } }
 
 .phone {
   width: 27.5rem;
@@ -95,36 +138,31 @@ a, a:visited, a:hover {
     .phone-screen .screen-chat {
       display: flex;
       flex-direction: column; }
-      .phone-screen .screen-chat .dog-walker {
+      .phone-screen .screen-chat .message {
         font-size: .9rem;
         max-width: 58%;
+        padding: .8rem 1rem;
+        margin-top: 1rem;
+        line-height: 1.2rem; }
+      .phone-screen .screen-chat .dog-walker {
         background-color: rgba(146, 65, 200, 0.1);
         color: #9241c8;
         border-radius: 1.2rem 1.2rem 1.2rem .4rem;
-        padding: .8rem 1rem;
-        margin-top: 1rem;
-        margin-left: 1rem;
-        line-height: 1.2rem; }
+        margin-left: 1rem; }
       .phone-screen .screen-chat .dog-owner {
         align-self: flex-end;
-        font-size: .9rem;
-        max-width: 58%;
         background-color: white;
-        padding: .8rem 1rem;
         color: #3e2753;
         border-radius: 1.2rem 1.2rem .4rem 1.2rem;
-        margin-top: 1rem;
         margin-right: 1rem;
-        line-height: 1.2rem;
-        box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.1); }
+        box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1); }
       .phone-screen .screen-chat .dog-owner-images {
         align-self: flex-end;
         font-size: .9rem;
-        max-width: 60%;
-        padding: .8rem 1rem 0 0;
+        max-width: 58%;
         color: #3e2753;
         border-radius: 1.2rem 1.2rem 0rem 1.2rem;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         margin-right: 1rem;
         line-height: 1.2rem; }
         .phone-screen .screen-chat .dog-owner-images img {
@@ -177,3 +215,31 @@ a, a:visited, a:hover {
         border-radius: 50%;
         padding: .7rem .9rem;
         text-align: center; }
+
+.text-wrapper {
+  max-width: 54rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  padding: 0 3.6rem;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .text-wrapper {
+      padding: 0;
+      margin-left: 4rem;
+      margin-top: 0;
+      min-width: 40rem;
+      text-align: left; } }
+  @media (min-width: 1200px) {
+    .text-wrapper {
+      margin-left: 12rem;
+      min-width: 45rem; } }
+  .text-wrapper .text-heading {
+    font-size: 4rem;
+    color: #3e2753;
+    font-weight: 500;
+    margin-bottom: 2.2rem; }
+  .text-wrapper .text-desc {
+    color: #a39daa;
+    font-size: 1.6rem;
+    line-height: 2.4rem; }

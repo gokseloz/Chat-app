@@ -3,16 +3,55 @@
 
 .main-wrapper {
     background-color: $light-grayish-violet;
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width:768px) {
+        height: 100vh;
+    }
 
     &::before {
         content: "";
         position: absolute;
+        width: 46rem;
+        height: 54rem;
+        background: linear-gradient(to top, $light-violet, $light-magenta), linear-gradient(to left, $light-violet, $light-magenta);
+        border-bottom-left-radius: 25rem;
+        border-bottom-right-radius: 25rem;
+        left: -27rem;
+
+        @media (min-width:768px) {
+            left: -15rem;
+            height: 69rem;
+            border-bottom-left-radius: 30rem;
+            border-bottom-right-radius: 30rem;
+        }
+        @media (min-width:1200px) {
+            left: -8rem;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
         width: 40rem;
-        height: 60rem;
-        background: linear-gradient(to bottom, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
-        border-bottom-left-radius: 20rem;
-        border-bottom-right-radius: 20rem;
-        left: -15rem;
+        height: 45rem;
+        background-color: rgba(233, 230, 239, .5);
+        border-top-left-radius: 25rem;
+        border-top-right-radius: 25rem;
+        bottom: 0;
+        right: -22rem;
+
+        @media (min-width:768px) {
+            height: 75rem;
+            right: -15rem;
+            border-top-left-radius: 40rem;
+            border-top-right-radius: 40rem;
+        }
+        @media (min-width:1200px) {
+            width: 45rem;
+            right: -12rem;
+        }
     }
 }
 
@@ -22,6 +61,16 @@
     flex-direction: column;
     align-items: center;
     padding-top: 6rem;
+    padding-bottom: 6rem;
+    z-index: 5;
+
+    @media (min-width:768px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        flex-direction: row;
+    }
 }
 
 .phone {
@@ -37,7 +86,6 @@
         background-color: $light-grayish-violet;
         border-radius: 2.2rem;
         overflow: hidden;
-
 
         .screen-head {
             display: flex;
@@ -113,47 +161,43 @@
             display: flex;
             flex-direction: column;
 
-            .dog-walker {
+            .message{
                 font-size: .9rem;
                 max-width: 58%;
-                background-color: rgba(hsl(276, 55%, 52%), .1);
-                color: hsl(276, 55%, 52%);
-                border-radius: 1.2rem 1.2rem 1.2rem .4rem;
                 padding: .8rem 1rem;
                 margin-top: 1rem;
-                margin-left: 1rem;
                 line-height: 1.2rem;
+            }
+
+            .dog-walker {
+                background-color: rgba($moderate-violet, .1);
+                color: $moderate-violet;
+                border-radius: 1.2rem 1.2rem 1.2rem .4rem;
+                margin-left: 1rem;
             }
 
             .dog-owner {
                 align-self: flex-end;
-                font-size: .9rem;
-                max-width: 58%;
                 background-color: $white;
-                padding: .8rem 1rem;
                 color: $very-dark-desaturated-violet;
                 border-radius: 1.2rem 1.2rem .4rem 1.2rem;
-                margin-top: 1rem;
                 margin-right: 1rem;
-                line-height: 1.2rem;
-                box-shadow: 0px 5px 10px -3px rgba(#000, .1);
+                box-shadow: 0px 5px 10px -5px rgba(#000, .1);
             }
 
             .dog-owner-images {
                 align-self: flex-end;
                 font-size: .9rem;
-                max-width: 60%;
-                padding: .8rem 1rem 0 0;
+                max-width: 58%;
                 color: $very-dark-desaturated-violet;
                 border-radius: 1.2rem 1.2rem 0rem 1.2rem;
-                margin-top: 1rem;
+                margin-top: 1.5rem;
                 margin-right: 1rem;
                 line-height: 1.2rem;
 
                 img {
                     width: 4rem;
                     border-radius: 1rem;
-
                 }
             }
 
@@ -222,5 +266,40 @@
             }
 
         }
+    }
+}
+
+.text-wrapper {
+    max-width: 54rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    padding: 0 3.6rem;
+    text-align: center;
+
+    @media (min-width:768px) {
+        padding: 0;
+        margin-left: 4rem;
+        margin-top: 0;
+        min-width: 40rem;
+        text-align: left;
+    }
+    @media (min-width:1200px) {
+        margin-left: 12rem;
+        min-width: 45rem;
+    }
+
+
+    .text-heading {
+        font-size: 4rem;
+        color: $very-dark-desaturated-violet;
+        font-weight: 500;
+        margin-bottom: 2.2rem;
+    }
+
+    .text-desc {
+        color: $dark-grayish-violet;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
     }
 }

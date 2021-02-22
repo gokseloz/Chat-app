@@ -7,7 +7,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "Rubik", sans-serif; }
+  font-family: 'Roboto', sans-serif; }
 
 a, a:visited, a:hover {
   text-decoration: none; }
@@ -50,9 +50,9 @@ a, a:visited, a:hover {
     @media (min-width: 768px) {
       .main-wrapper::after {
         height: 75rem;
-        right: -15rem;
         border-top-left-radius: 40rem;
-        border-top-right-radius: 40rem; } }
+        border-top-right-radius: 40rem;
+        right: -15rem; } }
     @media (min-width: 1200px) {
       .main-wrapper::after {
         width: 45rem;
@@ -75,10 +75,14 @@ a, a:visited, a:hover {
       flex-direction: row; } }
 
 .phone {
-  width: 27.5rem;
+  width: 29.5rem;
   padding: 1.2rem;
   background-color: white;
-  border-radius: 3.2rem; }
+  border-radius: 3.2rem;
+  box-shadow: 5px 20px 25px -5px rgba(0, 0, 0, 0.2); }
+  @media (min-width: 1200px) {
+    .phone {
+      transform: scale(1.2); } }
   .phone-screen {
     display: flex;
     flex-direction: column;
@@ -104,10 +108,11 @@ a, a:visited, a:hover {
         transform: translateX(-50%);
         border-radius: 0px 0px 18px 18px;
         background-color: white; }
-      .phone-screen .screen-head .left-arrow {
+      .phone-screen .screen-head .back-arrow {
         color: white;
         font-size: 1.4rem;
-        flex: 1; }
+        flex: 1;
+        cursor: pointer; }
       .phone-screen .screen-head .profile {
         display: flex;
         align-items: center;
@@ -117,33 +122,37 @@ a, a:visited, a:hover {
           width: 3.2rem;
           border-radius: 50%;
           border: 2px solid white; }
-        .phone-screen .screen-head .profile-area {
+        .phone-screen .screen-head .profile-info {
           display: flex;
           flex-direction: column;
           margin-left: 1rem;
           height: 100%; }
-          .phone-screen .screen-head .profile-area .profile-name {
+          .phone-screen .screen-head .profile-info .profile-name {
             font-size: 1.4rem;
             font-weight: 500;
             color: white;
             margin-bottom: 3px; }
-          .phone-screen .screen-head .profile-area .profile-status {
+          .phone-screen .screen-head .profile-info .profile-status {
             color: #d89eff;
             font-size: .8rem; }
       .phone-screen .screen-head .ellipsis {
         color: white;
         font-size: 1.2rem;
         flex: 1;
-        text-align: right; }
+        text-align: right;
+        cursor: pointer; }
     .phone-screen .screen-chat {
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      overflow: auto;
+      height: 41rem; }
       .phone-screen .screen-chat .message {
         font-size: .9rem;
         max-width: 58%;
         padding: .8rem 1rem;
         margin-top: 1rem;
-        line-height: 1.2rem; }
+        line-height: 1.2rem;
+        word-wrap: break-word; }
       .phone-screen .screen-chat .dog-walker {
         background-color: rgba(146, 65, 200, 0.1);
         color: #9241c8;
@@ -203,18 +212,23 @@ a, a:visited, a:hover {
         outline: none;
         border: none;
         margin-left: 1.5rem;
+        margin-right: .5rem;
         color: #3e2753;
-        font-size: .9rem; }
+        font-size: .9rem;
+        height: 3rem;
+        flex: 1;
+        font-size: 1rem; }
         .phone-screen .textArea input::placeholder {
           font-size: 1rem;
           color: #c6cacd; }
-      .phone-screen .textArea i {
+      .phone-screen .textArea .send {
         font-size: 1.4rem;
         color: white;
         background-color: #3e2753;
         border-radius: 50%;
         padding: .7rem .9rem;
-        text-align: center; }
+        text-align: center;
+        cursor: pointer; }
 
 .text-wrapper {
   max-width: 54rem;
@@ -225,15 +239,15 @@ a, a:visited, a:hover {
   text-align: center; }
   @media (min-width: 768px) {
     .text-wrapper {
-      padding: 0;
-      margin-left: 4rem;
-      margin-top: 0;
       min-width: 40rem;
+      padding: 0;
+      margin-top: 0;
+      margin-left: 4rem;
       text-align: left; } }
   @media (min-width: 1200px) {
     .text-wrapper {
-      margin-left: 12rem;
-      min-width: 45rem; } }
+      width: 45rem;
+      margin-left: 12rem; } }
   .text-wrapper .text-heading {
     font-size: 4rem;
     color: #3e2753;

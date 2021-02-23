@@ -4,8 +4,7 @@ let sendBtn = document.querySelector(".send")
 
 function sendMsg(){
     let ownerMsg = document.createElement("p");
-    ownerMsg.classList.add("message")
-    ownerMsg.classList.add("dog-owner")
+    ownerMsg.classList.add("message", "dog-owner")
     ownerMsg.innerText = input.value
 
     if (input.value.length == 0) {

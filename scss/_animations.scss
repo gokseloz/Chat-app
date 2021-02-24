@@ -1,0 +1,9 @@
+@keyframes left-in {
+    from {transform: translateX(-120%); opacity: 0;}
+    to{transform: translateX(0); opacity: 1;}
+}
+
+@keyframes right-in {
+    from {transform: translateX(120%); opacity: 0;}
+    to{transform: translateX(0); opacity: 1;}
+}

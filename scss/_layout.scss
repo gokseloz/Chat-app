@@ -166,6 +166,7 @@
             flex-direction: column;
             overflow: auto;
             height: 41rem;
+            overflow-x: hidden;
 
             .message{
                 font-size: .9rem;
@@ -181,6 +182,7 @@
                 color: $moderate-violet;
                 border-radius: 1.2rem 1.2rem 1.2rem .4rem;
                 margin-left: 1rem;
+
             }
 
             .dog-owner {
@@ -313,4 +315,14 @@
         font-size: 1.6rem;
         line-height: 2.4rem;
     }
+}
+
+@keyframes left-in {
+    from {transform: translateX(-120%); opacity: 0;}
+    to{transform: translateX(0); opacity: 1;}
+}
+
+@keyframes right-in {
+    from {transform: translateX(120%); opacity: 0;}
+    to{transform: translateX(0); opacity: 1;}
 }

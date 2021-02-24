@@ -14,11 +14,11 @@ function sendMsg(){
         input.value = ""
     }
     screenChat.scrollTop = screenChat.scrollHeight
-    
 }
 
 sendBtn.addEventListener("click", sendMsg)
 
+//Keyboard "Enter" button
 input.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
         event.preventDefault();

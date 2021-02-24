@@ -30,3 +30,28 @@
         transform: scale(1) rotateZ(0deg);
     }
 }
+
+.left-in-delay-0s{
+    animation: left-in 1s;
+}
+
+.left-in-delay-1s{
+    animation: left-in 1s 1s backwards;
+}
+
+.right-in-delay-3s{
+    animation: right-in 1s 3s backwards;
+}
+.right-in-delay-4s{
+    animation: right-in 1s 4s backwards;
+}
+.right-in-delay-5s{
+    animation: right-in 1s 5s backwards;
+}
+.left-in-delay-7s{
+    animation: left-in 1s 7s backwards;
+}
+
+.rotate-in-delay-8s{
+    animation: offersAnim 1s 8s linear backwards;
+}

@@ -272,3 +272,17 @@ body {
   to {
     transform: translateX(0);
     opacity: 1; } }
+
+@keyframes offersAnim {
+  0% {
+    transform: scale(0) rotateZ(0deg); }
+  25% {
+    transform: scale(0.2) rotateZ(10deg); }
+  50% {
+    transform: scale(0.4) rotateZ(-10deg); }
+  75% {
+    transform: scale(0.6) rotateZ(5deg); }
+  90% {
+    transform: scale(0.8) rotateZ(-5deg); }
+  100% {
+    transform: scale(1) rotateZ(0deg); } }

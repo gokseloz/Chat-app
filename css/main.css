@@ -275,27 +275,15 @@ body {
 
 @keyframes offersAnim {
   0% {
-    transform: scale(0) rotateZ(0deg); }
-  10% {
-    transform: scale(0.1) rotateZ(-5deg); }
-  20% {
-    transform: scale(0.2) rotateZ(5deg); }
-  30% {
-    transform: scale(0.3) rotateZ(-5deg); }
-  40% {
-    transform: scale(0.4) rotateZ(5deg); }
-  50% {
-    transform: scale(0.5) rotateZ(-5deg); }
+    transform: translateX(-3000px); }
   60% {
-    transform: scale(0.6) rotateZ(3deg); }
-  70% {
-    transform: scale(0.7) rotateZ(-3deg); }
-  80% {
-    transform: scale(0.8) rotateZ(3deg); }
+    transform: translateX(25px); }
+  75% {
+    transform: translateX(-10px); }
   90% {
-    transform: scale(0.9) rotateZ(-3deg); }
-  100% {
-    transform: scale(1) rotateZ(0deg); } }
+    transform: translateX(5px); }
+  to {
+    transform: translateX(0); } }
 
 .left-in-delay-0s {
   animation: left-in 1s; }

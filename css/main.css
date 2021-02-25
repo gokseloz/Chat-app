@@ -303,5 +303,5 @@ body {
 .left-in-delay-7s {
   animation: left-in 1s 7s backwards; }
 
-.rotate-in-delay-8s {
+.left-in-delay-8s {
   animation: offersAnim 1s 8s linear backwards; }
